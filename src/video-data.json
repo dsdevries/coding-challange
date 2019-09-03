@@ -1,0 +1,24 @@
+{
+    "videos": [
+        {
+            "name": "Corvair",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/0/Corvairi1960.m3u8"
+        },
+        {
+            "name": "How Watches Work",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/1/HowaWatc1949.m3u8"
+        },
+        {
+            "name": "Living Stereo",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/2/LivingSt1958.m3u8"
+        },
+        {
+            "name": "This Is Coffee",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/3/ThisisCo1961.m3u8"
+        },
+        {
+            "name": "A Visit To Wurlitzer",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/4/VisittoW1950.m3u8"
+        }
+    ]
+}

@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useReducer } from 'react';
 import './App.css';
+import initialState from './state/initial-state';
+import actions from './state/actions';
+import rootReducer from './state/root-reducer';
+import VideoPlayer from './components/VideoPlayer';
+import videoData from './video-data.json';
 
 function App() {
+
+  const [state, dispatch] = useReducer(rootReducer, initialState);
+  const { player: { videoSelected, videos }} = state;
+
+  dispatch({
+    type: actions.HYDRATE_VIDEO_DATA,
+    payload: videoData
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <VideoPlayer
+        dispatch={dispatch}
+        videoSelected={videoSelected}
+        videos={videos}
+      />
     </div>
   );
 }
