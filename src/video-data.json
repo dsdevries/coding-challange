@@ -1,24 +1,29 @@
 {
     "videos": [
         {
-            "name": "Corvair",
-            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/0/Corvairi1960.m3u8"
+            "name": "The Corvair in Action",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/0/Corvairi1960.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/0/the-corvair-in-action-thumb.jpg"
         },
         {
-            "name": "How Watches Work",
-            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/1/HowaWatc1949.m3u8"
+            "name": "How a Watch Works",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/1/HowaWatc1949.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/1/how-a-watch-works-thumb.jpg"
         },
         {
             "name": "Living Stereo",
-            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/2/LivingSt1958.m3u8"
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/2/LivingSt1958.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/2/living-stereo-thumb.jpg"
         },
         {
             "name": "This Is Coffee",
-            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/3/ThisisCo1961.m3u8"
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/3/ThisisCo1961.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/3/this-is-coffee-thumb.jpg"
         },
         {
-            "name": "A Visit To Wurlitzer",
-            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/4/VisittoW1950.m3u8"
+            "name": "A Visit to Wurlitzer",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/4/VisittoW1950.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/4/a-visit-to-wurlitzer-thumb.jpg"
         }
     ]
 }

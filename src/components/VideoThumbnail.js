@@ -1,9 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 
-export default function VideoThumbnail({ src, name, index }) {
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export default function VideoThumbnail({ src, name, onClick }) {
     return (
-        <div>
+        <Wrapper
+            onClick={onClick}
+        >
             <img alt='name' src={src} />
-        </div>
+            {name}
+        </Wrapper>
     );
 }

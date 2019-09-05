@@ -6,7 +6,7 @@ export default (state, action) => {
     switch (action.type) {
         case actions.HYDRATE_VIDEO_DATA:
             return produce(state, draft => {
-                draft.player.videoData = actions.payload
+                draft.player.videos = action.payload
             });
         case actions.SELECT_VIDEO:
             return produce(state, draft => {

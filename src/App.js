@@ -1,5 +1,6 @@
 import React, { useEffect, useReducer } from 'react';
 import './App.css';
+import 'video-react/dist/video-react.css';
 import initialState from './state/initial-state';
 import actions from './state/actions';
 import rootReducer from './state/root-reducer';
@@ -11,10 +12,12 @@ function App() {
   const [state, dispatch] = useReducer(rootReducer, initialState);
   const { player: { videoSelected, videos }} = state;
 
-  dispatch({
-    type: actions.HYDRATE_VIDEO_DATA,
-    payload: videoData
-  });
+  useEffect(() => {
+    dispatch({
+      type: actions.HYDRATE_VIDEO_DATA,
+      payload: videoData.videos
+    });
+  }, []);
 
   return (
     <div className="App">
