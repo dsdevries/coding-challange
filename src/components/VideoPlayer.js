@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import VideoList from './VideoList';
-import VideoPane from './VideoPane';
+import VideoRectangle from './VideoRectangle';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -16,7 +16,7 @@ export default function VideoPlayer({ dispatch, videoSelected, videos }) {
         <Fragment>
             <h1>Video Player</h1>
             <Wrapper>
-                <VideoPane
+                <VideoRectangle
                     videoSelected={videoSelected}
                     videos={videos}
                 />
