@@ -24,6 +24,56 @@
             "name": "A Visit to Wurlitzer",
             "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/4/VisittoW1950.m3u8",
             "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/4/a-visit-to-wurlitzer-thumb.jpg"
+        },
+        {
+            "name": "All Star Swing Festival",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/5/AllStarSwingFestival.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/5/all-star-swing-festival-thumb.jpg"
+        },
+        {
+            "name": "Coney Island",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/6/ConeyIsland.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/6/coney-island-thumb.jpg"
+        },
+        {
+            "name": "Cooperation vs Gentrification",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/7/CooperationVsGentrification.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/7/cooperation-vs-gentrification-thumb.jpg"
+        },
+        {
+            "name": "The Bronx Ultimate Guide",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/8/TheBronxUltimateGuide.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/8/the-bronx-ultimate-guide-thumb.jpg"
+        },
+        {
+            "name": "Gallery 8",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/9/Gallery8.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/9/gallery-8-thumb.jpg"
+        },
+        {
+            "name": "Microsoft Research",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/10/MicrosoftResearch.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/10/microsoft-research-thumb.jpg"
+        },
+        {
+            "name": "About Bananas",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/11/AboutBananas.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/11/about-bananas-thumb.jpg"
+        },
+        {
+            "name": "Build Your Vocabulary",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/12/BuildYourVocabulary.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/12/build-your-vocabulary-thumb.jpg"
+        },
+        {
+            "name": "Chicken of Tomorrow",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/13/ChickenOfTomorrow.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/13/chicken-of-tomorrow-thumb.jpg"
+        },
+        {
+            "name": "Private Life of a Cat",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/14/PrivateLifeOfACat.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/14/private-life-of-a-cat-thumb.jpg"
         }
     ]
 }

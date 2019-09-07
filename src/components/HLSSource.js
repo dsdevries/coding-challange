@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 
-// TODO: Explain HLS and give some context
+/*
+    This file is based on an example from the video-react docs. See
+    how just below this comment we destructure a variable called Hls
+    off of window? That's a class provided by the hls.js library that
+    lets us use HLS technology to load and play our videos.
+
+    Long story short, HLS is a protocol that lets us divide and
+    conquer video files or streams so that we can play them in the
+    most efficient manner. You can read more about it here:
+    https://en.wikipedia.org/wiki/HTTP_Live_Streaming
+*/
 
 const { Hls } = window;
 

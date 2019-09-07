@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     width: 50%;
 `;
 
-export default function VideoPane({ videoSelected, videos }) {
+export default function VideoRectangle({ videoSelected, videos }) {
 
     const [videoSource, setVideoSource] = useState(null);
 

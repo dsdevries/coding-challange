@@ -12,7 +12,7 @@ export default function VideoList({ dispatch, videos }) {
     return (
         <Wrapper>
             {
-                videos.map((video, i) => {
+                videos.slice(0, 3).map((video, i) => {
                     return (
                         <VideoThumbnail
                             dispatch={dispatch}
