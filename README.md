@@ -1,4 +1,4 @@
-# DSS Code Challenge
+# Web Skill Assessment
 
 Welcome to the code challenge for web software engineering at Disney Streaming. This repo is actually a small web application, a video player written in React, and your job is to implement some improvements and features.
 
