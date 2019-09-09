@@ -1,6 +1,10 @@
 # DSS Code Challenge
 
-Welcome to the code challenge for web software engineering at Disney Streaming. This repo is actually a small web application -- a video player written in React -- and your job is to implement some improvements and features. There are several tasks listed below as _Required_, which are the baseline for completing a successful application. There are more tasks listed as _Extra_, which are either extra credit or which you may be asked by a hiring manager to choose from.
+Welcome to the code challenge for web software engineering at Disney Streaming. This repo is actually a small web application, a video player written in React, and your job is to implement some improvements and features.
+
+There are several tasks listed below as *Required*, which are the baseline for completing a successful application. There are more tasks listed as *Extra*, which are either extra credit or which you may be asked by a hiring manager to complete.
+
+Feel free to reach out to your point of contact at Disney Streaming with any questions.
 
 # Steps to Completion
 
