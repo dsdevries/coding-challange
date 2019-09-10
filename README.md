@@ -8,13 +8,15 @@ Feel free to reach out to your point of contact at Disney Streaming with any que
 
 # Steps to Completion
 
-1) Clone this repo to your computer and install its dependencies with npm.
+1) Fork this repo to your personal GitHub account.
 
-2) Create a branch with your name (e.g.: jane-dough).
+2) Clone the forked repo to your computer and install its dependences with npm.
 
-3) Complete the required baseline tasks.
+3) Create a branch with your name (e.g.: *jane-dough*).
 
-4) Complete any extra tasks you would like to or that have been requested of you.
+4) Complete the **Required** tasks (see below).
+
+5) Complete any **Extra** tasks you would like to or that have been requested of you.
 
 5) Make a PR against the master branch from your name branch.
 
