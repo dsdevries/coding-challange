@@ -8,19 +8,17 @@ Feel free to reach out to your point of contact at Disney Streaming with any que
 
 # Steps to Completion
 
-1) Fork this repo.
+1) Clone your fork to your computer and install its dependencies with npm.
 
-2) Clone your fork to your computer and install its dependencies with npm.
+2) Create a branch with your name (e.g.: jane-dough).
 
-3) Create a branch with your name (e.g.: jane-dough).
+3) Complete the required baseline tasks.
 
-4) Complete the required baseline tasks.
+4) Complete any extra tasks you would like to or that have been requested of you.
 
-5) Complete any extra tasks you would like to or that have been requested of you.
+5) Make a PR against the master branch from your name branch.
 
-6) Make a PR against the master branch from your name branch.
-
-7) Alert the hiring manager or recruiter that you've made the PR, and include a link to your forked repo. You may be asked to add a DSS code reviewer as a collaborator to your fork.
+6) Alert the hiring manager or recruiter that you've made the PR, and include a link to your forked repo. You may be asked to add a DSS code reviewer as a collaborator to your fork.
 
 # Required Tasks
 
