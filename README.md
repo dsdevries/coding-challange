@@ -6,7 +6,7 @@ There are several tasks listed below as **Required**, which are the baseline for
 
 Feel free to reach out to your point of contact at Disney Streaming with any questions.
 
-# Steps to Completion
+# General Setup and Submission Process
 
 1) Fork this repo to your personal GitHub account.
 
@@ -18,11 +18,13 @@ Feel free to reach out to your point of contact at Disney Streaming with any que
 
 5) Complete any **Extra** tasks you would like to or that have been requested of you.
 
-5) Make a PR against the master branch from your name branch.
+6) Make a PR against the master branch from your name branch.
 
-6) Alert the hiring manager or recruiter that you've made the PR, and include a link to your repo. Please add rackley-dss as a collaborator to the project.
+7) Add rackley-dss as a collaborator to the project.
 
-# Required Tasks
+8) Alert Jenn Yee that you've completed the tasks and include a link to your repo.
+
+# Required Coding Tasks
 
 1) Implement these layouts for mobile and desktop. Use Styled Components for the CSS.
 
