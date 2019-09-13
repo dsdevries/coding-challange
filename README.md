@@ -20,7 +20,7 @@ Feel free to reach out to your point of contact at Disney Streaming with any que
 
 5) Make a PR against the master branch from your name branch.
 
-6) Alert the hiring manager or recruiter that you've made the PR, and include a link to your repo. You may be asked to add a DSS code reviewer as a collaborator.
+6) Alert the hiring manager or recruiter that you've made the PR, and include a link to your repo. Please add rackley-dss as a collaborator to the project.
 
 # Required Tasks
 
