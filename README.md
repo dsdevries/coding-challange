@@ -12,13 +12,13 @@ Feel free to reach out to your point of contact at Disney Streaming with any que
 
 2) Clone the forked repo to your computer and install its dependences with npm.
 
-3) Create a branch with your name (e.g.: *jane-dough*).
+3) Create a branch with your name (e.g.: *jane-dough*) in your fork.
 
 4) Complete the **Required** tasks (see below).
 
 5) Complete any **Extra** tasks you would like to or that have been requested of you.
 
-6) Make a PR against the master branch from your name branch.
+6) Make a PR against the master branch from your name branch. **Do not PR across forks. PR against your branch's master!**
 
 7) Add rackley-dss as a collaborator to the project.
 
