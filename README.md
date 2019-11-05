@@ -43,7 +43,7 @@ Desktop
 
 5) Make the selected video autoplay when a tile in the list is clicked.
 
-6) If you are applying for a **senior** role, refactor the app to use Redux instead of hooks for managing global state. Make sure to enable Redux Dev Tools, too. Consider this an Extra Task if you aren't applying for a senior role.
+6) **If you are applying for a senior role**, refactor the app to use Redux instead of hooks for managing global state. Make sure to enable Redux Dev Tools, too. Consider this an Extra Task if you aren't applying for a senior role.
 
 # Extra Tasks (Complete any you can in the given time.)
 
