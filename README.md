@@ -20,9 +20,7 @@ Feel free to reach out to your point of contact at Disney Streaming with any que
 
 6) Make a PR against the master branch from your name branch. **Do not PR across forks. PR against your branch's master!**
 
-7) Add rackley-dss as a collaborator to the project.
-
-8) Alert Jenn Yee that you've completed the tasks and include a link to your repo.
+7) Alert your recruiter that you've submitted a PR. They _may_ ask you to add collaborators.
 
 # Required Coding Tasks
 
@@ -43,10 +41,18 @@ Desktop
 
 4) This is not a design challenge, but use your best judgement to make the site look nice.
 
-# Extra Tasks
+5) Make the selected video autoplay when a tile in the list is clicked.
 
-1) Refactor the app to use Redux instead of hooks for managing global state. Make sure to enable Redux Dev Tools, too.
+<sup>*</sup>6) If you are applying for a **senior** role, refactor the app to use Redux instead of hooks for managing global state. Make sure to enable Redux Dev Tools, too. Consider this an Extra Task if you aren't applying for a senior role.
+
+# Extra Tasks (Complete any you can in the given time.)
+
+1) Write tests using the tool of your choice.
 
 2) Implement lazy loading, loading 5 videos at a time on scroll down in VideoList.
 
 3) Add deep linking support so that a user can link directly to a video and so that clicking on a thumbnail not only plays the video but also reflects the title in the browser url bar. Consider a library like React Router.
+
+4) Convert the app to TypeScript.
+
+5) Write your own Express server that serves the app.
