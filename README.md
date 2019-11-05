@@ -16,7 +16,7 @@ Feel free to reach out to your point of contact at Disney Streaming with any que
 
 4) Complete the **Required** tasks (see below).
 
-5) Complete any **Extra** tasks you would like to or that have been requested of you.
+5) Complete any **Extra** tasks that you can within the given time.
 
 6) Make a PR against the master branch from your name branch. **Do not PR across forks. PR against your branch's master!**
 
@@ -43,7 +43,7 @@ Desktop
 
 5) Make the selected video autoplay when a tile in the list is clicked.
 
-<sup>*</sup>6) If you are applying for a **senior** role, refactor the app to use Redux instead of hooks for managing global state. Make sure to enable Redux Dev Tools, too. Consider this an Extra Task if you aren't applying for a senior role.
+6) If you are applying for a **senior** role, refactor the app to use Redux instead of hooks for managing global state. Make sure to enable Redux Dev Tools, too. Consider this an Extra Task if you aren't applying for a senior role.
 
 # Extra Tasks (Complete any you can in the given time.)
 
