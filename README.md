@@ -43,11 +43,16 @@ Desktop
 
 5) Make the selected video autoplay when a tile in the list is clicked.
 
-6) **If you are applying for a senior role**, refactor the app to use Redux instead of hooks for managing global state. Make sure to enable Redux Dev Tools, too. Consider this an Extra Task if you aren't applying for a senior role.
+# Senior Role Requirements
+The following tasks are required if you are applying for a senior role.
+
+1) Refactor the app to use Redux instead of hooks for managing global state. Make sure to enable Redux Dev Tools, too. 
+
+2) Write tests using the tool of your choice.
 
 # Extra Tasks (Complete any you can in the given time.)
 
-1) Write tests using the tool of your choice.
+1) Consider doing any of the senior role requirements, if you haven't already.
 
 2) Implement lazy loading, loading 5 videos at a time on scroll down in VideoList.
 
