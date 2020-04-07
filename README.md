@@ -44,7 +44,7 @@ Desktop
 5) Make the selected video autoplay when a tile in the list is clicked.
 
 # Senior Role Requirements
-The following tasks are required if you are applying for a senior role.
+The following additional tasks are required if you are applying for a senior role.
 
 1) Refactor the app to use Redux instead of hooks for managing global state. Make sure to enable Redux Dev Tools, too. 
 
