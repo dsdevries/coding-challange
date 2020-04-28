@@ -12,13 +12,13 @@ Feel free to reach out to your point of contact at Disney Streaming with any que
 
 2) Clone the forked repo to your computer and install its dependences with npm.
 
-3) Create a branch with your name (e.g.: *jane-dough*) in your fork.
+3) Create a branch with your name (e.g.: *jane-doe*) in your fork.
 
 4) Complete the **Required** tasks (see below).
 
 5) Complete any **Extra** tasks that you can within the given time.
 
-6) Make a PR against the master branch from your name branch. **Do not PR across forks. PR against your branch's master!**
+6) Make a PR against the master branch from your name branch. **Do not PR across forks. PR against your fork's master!**
 
 7) Alert your recruiter that you've submitted a PR. They _may_ ask you to add collaborators.
 
