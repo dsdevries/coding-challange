@@ -46,7 +46,7 @@ Desktop
 # Senior Role Requirements
 The following additional tasks are required if you are applying for a senior role.
 
-1) Refactor the app to use Redux instead of hooks for managing global state. Make sure to enable Redux Dev Tools, too. 
+1) Refactor the app to use Redux for managing global state. Make sure to enable Redux Dev Tools, too. 
 
 2) Write tests using the tool of your choice.
 
