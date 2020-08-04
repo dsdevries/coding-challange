@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
+import styled from 'styled-components';
+
 import VideoList from './VideoList';
 import VideoRectangle from './VideoRectangle';
-import styled from 'styled-components';
-import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
     margin: 0 auto;

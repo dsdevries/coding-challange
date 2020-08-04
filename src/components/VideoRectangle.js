@@ -1,5 +1,7 @@
+import PropTypes from "prop-types";
 import React, { useEffect, useState } from 'react';
 import { connect } from "react-redux";
+import styled from 'styled-components';
 import {
     Player,
     ControlBar,
@@ -10,10 +12,9 @@ import {
     PlaybackRateMenuButton,
     VolumeMenuButton
 } from 'video-react';
+
 import { getSelectedVideo } from "../state/modules/videos/videos";
 import HLSSource from './HLSSource';
-import styled from 'styled-components';
-import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
     width: 50%;
@@ -23,12 +24,14 @@ const VideoRectangle = ({ videoSelected }) => {
     const [videoSource, setVideoSource] = useState(null);
 
     useEffect(() => {
+        // I rather use optional chaining for the next line, but i don't have the time to setup babel or the like
+        // eslint-disable-next-line
         setVideoSource(videoSelected && videoSelected.path || '');
     }, [videoSelected, videoSource]);
 
     return (
         <Wrapper>
-            <h1>Video Player</h1>
+            <h1>{videoSelected && videoSelected.name}</h1>
             <Player>
                 <HLSSource
                     isVideoChild

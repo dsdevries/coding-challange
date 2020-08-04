@@ -1,9 +1,11 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
-import VideoThumbnail from './VideoThumbnail';
-import styled from 'styled-components';
 import {connect} from "react-redux";
+import { useHistory } from "react-router-dom";
+import styled from 'styled-components';
+
 import {getVideos} from "../state/modules/videos/videos";
+import VideoThumbnail from './VideoThumbnail';
+import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
     display: flex;
@@ -18,7 +20,7 @@ const VideoList = ({ videos }) => {
             <h2>Up Next:</h2>
 
             {
-                videos.data.map((video, i) => {
+                videos && videos.data && videos.data.map((video, i) => {
                     return (
                         <VideoThumbnail
                             key={`${video.name}-thumbnail`}
@@ -34,6 +36,10 @@ const VideoList = ({ videos }) => {
         </Wrapper>
     );
 }
+
+VideoList.propTypes = {
+    videos: PropTypes.object,
+};
 
 const mapStateToProps = state => {
     return {

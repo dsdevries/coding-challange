@@ -1,13 +1,14 @@
+import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+
 import VideoPlayer from "../components/VideoPlayer";
 import { fetchVideos } from "../state/modules/videos/videos";
 
-const HomePage = ({ fetchVideos, match}) => {
+const HomePage = ({ fetchVideos}) => {
   useEffect(() => {
     fetchVideos();
-  }, []);
+  }, [fetchVideos]);
 
   return (
     <div>
@@ -19,8 +20,6 @@ const HomePage = ({ fetchVideos, match}) => {
 HomePage.propTypes = {
   fetchVideos: PropTypes.func.isRequired,
 };
-
-
 
 const mapDispatchToProps = dispatch => ({
     fetchVideos: payload => {
