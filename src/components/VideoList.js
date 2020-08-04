@@ -2,13 +2,15 @@ import React from 'react';
 import { useHistory } from "react-router-dom";
 import VideoThumbnail from './VideoThumbnail';
 import styled from 'styled-components';
+import {connect} from "react-redux";
+import {getVideos} from "../state/modules/videos/videos";
 
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
 `;
 
-export default function VideoList({ dispatch, videos }) {
+const VideoList = ({ videos }) => {
     const history = useHistory();
 
     return (
@@ -16,14 +18,13 @@ export default function VideoList({ dispatch, videos }) {
             <h2>Up Next:</h2>
 
             {
-                videos.slice(0, 3).map((video, i) => {
+                videos.data.map((video, i) => {
                     return (
                         <VideoThumbnail
-                            dispatch={dispatch}
                             key={`${video.name}-thumbnail`}
                             name={video.name}
                             onClick={() => {
-                                history.push(`/${i}`)
+                                history.push(`/${video.slug}`)
                             }}
                             src={video.thumbnail}
                         />
@@ -33,3 +34,13 @@ export default function VideoList({ dispatch, videos }) {
         </Wrapper>
     );
 }
+
+const mapStateToProps = state => {
+    return {
+        videos: getVideos(state),
+    };
+};
+
+export default connect(
+    mapStateToProps,
+)(VideoList);

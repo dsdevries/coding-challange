@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { connect } from "react-redux";
 import {
     Player,
     ControlBar,
@@ -9,21 +10,21 @@ import {
     PlaybackRateMenuButton,
     VolumeMenuButton
 } from 'video-react';
+import { getSelectedVideo } from "../state/modules/videos/videos";
 import HLSSource from './HLSSource';
-import _get from 'lodash/get';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
     width: 50%;
 `;
 
-export default function VideoRectangle({ videoSelected, videos }) {
-
+const VideoRectangle = ({ videoSelected }) => {
     const [videoSource, setVideoSource] = useState(null);
 
     useEffect(() => {
-        setVideoSource(_get(videos, `${videoSelected}.path`, ''));
-    }, [videoSelected, videoSource, videos]);
+        setVideoSource(videoSelected && videoSelected.path || '');
+    }, [videoSelected, videoSource]);
 
     return (
         <Wrapper>
@@ -45,3 +46,17 @@ export default function VideoRectangle({ videoSelected, videos }) {
         </Wrapper>
     );
 }
+
+VideoRectangle.propTypes = {
+    videoSelected: PropTypes.object,
+};
+
+const mapStateToProps = (state) => {
+    return {
+        videoSelected: getSelectedVideo(state),
+    };
+};
+
+export default connect(
+    mapStateToProps,
+)(VideoRectangle);

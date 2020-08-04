@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import VideoList from './VideoList';
 import VideoRectangle from './VideoRectangle';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
     margin: 0 auto;
@@ -15,19 +16,13 @@ const Wrapper = styled.div`
     }
 `;
 
-export default function VideoPlayer({ dispatch, videoSelected, videos }) {
-    return (
-        <Fragment>
-            <Wrapper>
-                <VideoRectangle
-                    videoSelected={videoSelected}
-                    videos={videos}
-                />
-                <VideoList
-                    dispatch={dispatch}
-                    videos={videos}
-                />
-            </Wrapper>
-        </Fragment>
-    );
-}
+const VideoPlayer = () => (
+    <Fragment>
+        <Wrapper>
+            <VideoRectangle />
+            <VideoList />
+        </Wrapper>
+    </Fragment>
+);
+
+export default VideoPlayer;
