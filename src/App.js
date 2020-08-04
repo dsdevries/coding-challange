@@ -1,33 +1,28 @@
-import React, { useEffect, useReducer } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ConnectedRouter as Router } from 'connected-react-router';
+import { Provider } from 'react-redux';
+
+import Routes from './Routes';
+
 import './App.css';
 import 'video-react/dist/video-react.css';
-import initialState from './state/initial-state';
-import actions from './state/actions';
-import rootReducer from './state/root-reducer';
-import VideoPlayer from './components/VideoPlayer';
-import videoData from './video-data.json';
 
-function App() {
-
-  const [state, dispatch] = useReducer(rootReducer, initialState);
-  const { player: { videoSelected, videos }} = state;
-
-  useEffect(() => {
-    dispatch({
-      type: actions.HYDRATE_VIDEO_DATA,
-      payload: videoData.videos
-    });
-  }, []);
-
+function App({ history, store }) {
   return (
     <div className="App">
-      <VideoPlayer
-        dispatch={dispatch}
-        videoSelected={videoSelected}
-        videos={videos}
-      />
+      <Provider store={store}>
+          <Router history={history}>
+            <Routes />
+          </Router>
+      </Provider>
     </div>
   );
 }
+
+App.propTypes = {
+    history: PropTypes.object.isRequired,
+    store: PropTypes.object.isRequired,
+};
 
 export default App;

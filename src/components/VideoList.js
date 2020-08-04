@@ -1,5 +1,5 @@
 import React from 'react';
-import actions from '../state/actions';
+import { useHistory } from "react-router-dom";
 import VideoThumbnail from './VideoThumbnail';
 import styled from 'styled-components';
 
@@ -9,6 +9,8 @@ const Wrapper = styled.div`
 `;
 
 export default function VideoList({ dispatch, videos }) {
+    const history = useHistory();
+
     return (
         <Wrapper>
             {
@@ -19,7 +21,7 @@ export default function VideoList({ dispatch, videos }) {
                             key={`${video.name}-thumbnail`}
                             name={video.name}
                             onClick={() => {
-                                dispatch({ type: actions.SELECT_VIDEO, payload: i });
+                                history.push(`/${i}`)
                             }}
                             src={video.thumbnail}
                         />
