@@ -9,12 +9,15 @@ const Wrapper = styled.div`
     mid-width: 200px;
     display: flex;
     flex-direction: row;
+    
+    VideoList {
+        margin-left: 15px;
+    }
 `;
 
 export default function VideoPlayer({ dispatch, videoSelected, videos }) {
     return (
         <Fragment>
-            <h1>Video Player</h1>
             <Wrapper>
                 <VideoRectangle
                     videoSelected={videoSelected}

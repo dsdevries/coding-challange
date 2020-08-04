@@ -27,6 +27,7 @@ export default function VideoRectangle({ videoSelected, videos }) {
 
     return (
         <Wrapper>
+            <h1>Video Player</h1>
             <Player>
                 <HLSSource
                     isVideoChild

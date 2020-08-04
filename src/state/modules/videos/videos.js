@@ -1,11 +1,17 @@
 import { handleActions, createAction } from 'redux-actions';
+import { apiGet } from './apiRequest';
 
 import initialState from './initial-state';
-import actions from './actions';
+
+const NAMESPACE = 'submissions';
+const VIDEOS_ENDPOINT = '/videos';
+
+const FETCH_VIDEOS = `${NAMESPACE}/FETCH_VIDEOS`;
+const HYDRATE_VIDEO_DATA = `${NAMESPACE}/HYDRATE_VIDEO_DATA`;
 
 const videosReducer = handleActions(
     {
-        [actions.HYDRATE_VIDEO_DATA]: (state, { payload: data }) => ({
+        [HYDRATE_VIDEO_DATA]: (state, { payload: data }) => ({
             ...state,
             videos: data,
         }),
@@ -16,7 +22,16 @@ const videosReducer = handleActions(
 export default videosReducer;
 
 // Action creators
-export const hydrateVideoData = createAction(actions.HYDRATE_VIDEO_DATA);
+export const hydrateVideoData = createAction(HYDRATE_VIDEO_DATA);
+
+// Thunks
+export const fetchVideos = () => dispatch => {
+    return dispatch(apiGet(FETCH_VIDEOS, VIDEOS_ENDPOINT)).payload.then(
+        response => {
+            dispatch(hydrateVideoData(response.data));
+        },
+    );
+};
 
 // Selectors
 export const getVideos = state => {

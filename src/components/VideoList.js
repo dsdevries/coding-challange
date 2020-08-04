@@ -13,6 +13,8 @@ export default function VideoList({ dispatch, videos }) {
 
     return (
         <Wrapper>
+            <h2>Up Next:</h2>
+
             {
                 videos.slice(0, 3).map((video, i) => {
                     return (

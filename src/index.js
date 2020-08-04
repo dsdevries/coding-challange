@@ -10,5 +10,7 @@ import './index.css';
 const history = createBrowserHistory();
 const store = createStore(history);
 
+console.log(process.env);
+
 ReactDOM.render(<App store={store} history={history} />, document.getElementById('root'));
 

@@ -2,9 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import VideoPlayer from "../components/VideoPlayer";
-import actions from "../state/modules/videos/actions";
-import videoData from "../video-data.json";
-import {getVideos} from "../state/modules/videos/videos";
+import {fetchVideos, getVideos} from "../state/modules/videos/videos";
 
 const HomePage = props => {
     const {
@@ -13,7 +11,7 @@ const HomePage = props => {
     } = props;
 
   useEffect(() => {
-    props.hydrateVideoData();
+    props.fetchVideos();
   }, []);
 
   return (
@@ -27,7 +25,7 @@ const HomePage = props => {
 };
 
 HomePage.propTypes = {
-  hydrateVideoData: PropTypes.func.isRequired,
+  fetchVideos: PropTypes.func.isRequired,
   location: PropTypes.object,
   videos: PropTypes.array,
 };
@@ -39,10 +37,9 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  hydrateVideoData: () => dispatch({
-      type: actions.HYDRATE_VIDEO_DATA,
-      payload: videoData.videos
-  }),
+    fetchVideos: payload => {
+        dispatch(fetchVideos(payload));
+    },
 });
 
 export default connect(
