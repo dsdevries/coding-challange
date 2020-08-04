@@ -1,9 +1,8 @@
-const http = require('http');
-const connect = require('connect');
+const express = require('express');
 const apiMocker = require('connect-api-mocker');
 
-const app = connect();
+const app = express();
 
 app.use(apiMocker('/api','mocks/api'));
 
-http.createServer(app).listen(8000);
+app.listen(8000);
