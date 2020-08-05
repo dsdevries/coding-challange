@@ -1,46 +1,7 @@
-import { handleActions, createAction } from 'redux-actions';
-import { createMatchSelector } from 'connected-react-router';
+import {createMatchSelector} from "connected-react-router";
 import {RoutePaths} from "../../../Routes";
+import {NAMESPACE, PAGE_SIZE} from "./const";
 
-import { apiGet } from './apiRequest';
-import initialState from './initial-state';
-
-const NAMESPACE = 'videos';
-const VIDEOS_ENDPOINT = '/videos';
-const PAGE_SIZE = 5;
-
-const FETCH_VIDEOS = `${NAMESPACE}/FETCH_VIDEOS`;
-const HYDRATE_VIDEO_DATA = `${NAMESPACE}/HYDRATE_VIDEO_DATA`;
-
-const videosReducer = handleActions(
-    {
-        [HYDRATE_VIDEO_DATA]: (state, { payload: data }) => ({
-            ...state,
-            data: data.map((video) => ({
-                ...video,
-                // not sure if i was allowed to change json data, so doing it here. ideally this should be don on backend.
-                slug: video.name.toLowerCase().replace(/ +/g, '-'),
-            })),
-        }),
-    },
-    initialState,
-);
-
-export default videosReducer;
-
-// Action creators
-export const hydrateVideoData = createAction(HYDRATE_VIDEO_DATA);
-
-// Thunks
-export const fetchVideos = () => dispatch => {
-    return dispatch(apiGet(FETCH_VIDEOS, VIDEOS_ENDPOINT)).payload.then(
-        response => {
-            dispatch(hydrateVideoData(response.data));
-        },
-    );
-};
-
-// Selectors
 export const getSelectedVideo = state => state[NAMESPACE].data.find((video) => {
     const matchSelector = createMatchSelector(RoutePaths.HOME);
     const match = matchSelector(state);

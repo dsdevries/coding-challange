@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { Waypoint } from 'react-waypoint';
 import styled from 'styled-components';
 
-import {getVideos} from "../state/modules/videos/videos";
+import {getVideos} from "../state/modules/videos/selectors";
 import VideoThumbnail from './VideoThumbnail';
 import PropTypes from "prop-types";
 

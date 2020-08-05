@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import VideoPlayer from "../components/VideoPlayer";
-import { fetchVideos } from "../state/modules/videos/videos";
+import { fetchVideos } from "../state/modules/videos/thunks";
 
 const HomePage = ({ fetchVideos}) => {
   useEffect(() => {

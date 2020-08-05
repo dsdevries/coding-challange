@@ -13,7 +13,7 @@ import {
     VolumeMenuButton
 } from 'video-react';
 
-import { getSelectedVideo } from "../state/modules/videos/videos";
+import { getSelectedVideo } from "../state/modules/videos/selectors";
 import HLSSource from './HLSSource';
 
 const Wrapper = styled.div`
