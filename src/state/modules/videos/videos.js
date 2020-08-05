@@ -47,14 +47,17 @@ export const getSelectedVideo = state => state[NAMESPACE].data.find((video) => {
     return video.slug === match.params.videoSelected;
 })
 
-const getData = state => state[NAMESPACE].data.filter((video) => {
+const getData = state => {
     const selectedVideo = getSelectedVideo(state);
-    return video.name !== selectedVideo.name;
-}).sort((a, b) => {
-    if(a.name < b.name) { return -1; }
-    if(a.name > b.name) { return 1; }
-    return 0;
-});
+
+    return state[NAMESPACE].data.filter((video) => {
+        return typeof selectedVideo === 'undefined' || video.name !== selectedVideo.name;
+    }).sort((a, b) => {
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+    });
+}
 
 export const getVideos = state => {
     const data = getData(state);

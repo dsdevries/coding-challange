@@ -25,7 +25,7 @@ const VideoList = ({ videos }) => {
         if (!videos || !videos.links || !videos.links.next) {
             return;
         }
-        
+
         history.push({
             search: videos.links.next,
         });
