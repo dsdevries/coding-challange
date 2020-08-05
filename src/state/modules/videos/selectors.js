@@ -25,10 +25,9 @@ export const getVideos = state => {
     const total_count = data.length;
     const page_count = Math.ceil(total_count / PAGE_SIZE);
     const searchParams = new URLSearchParams(state.router.location.search);
-    const nextSearchParams = new URLSearchParams(state.router.location.search);
     const page = parseInt(searchParams.get('page')) || 1;
 
-    nextSearchParams.set('page', page + 1);
+    searchParams.set('page', page + 1);
 
     return {
         page,
@@ -36,7 +35,7 @@ export const getVideos = state => {
         page_count,
         total_count,
         links: {
-            next: page === page_count ? null : `?${nextSearchParams.toString()}`,
+            next: page === page_count ? null : `?${searchParams.toString()}`,
         },
         data: data.slice(0 , page * PAGE_SIZE),
     };
