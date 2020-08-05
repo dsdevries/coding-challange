@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "mock": "node ./mocks/startup"
+    "mock": "node ./mocks/startup",
+    "preview": "node ./preview/startup"
   },
   "eslintConfig": {
     "extends": "react-app"
