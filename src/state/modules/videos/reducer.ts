@@ -1,22 +1,26 @@
 import { handleActions } from 'redux-actions';
 
-import { NAMESPACE } from "./const";
+import {HYDRATE_VIDEO_DATA} from "./const";
 import initialState from './initialState';
+import {iVideo} from "./video";
 
-const HYDRATE_VIDEO_DATA = `${NAMESPACE}/HYDRATE_VIDEO_DATA`;
+interface iHydrateVideoAction {
+    payload: Array<iVideo>;
+    type: string,
+}
 
 const videosReducer = handleActions(
     {
-        [HYDRATE_VIDEO_DATA]: (state, { payload: data }) => ({
+        [HYDRATE_VIDEO_DATA]: (state: any, action: iHydrateVideoAction ) => ({
             ...state,
-            data: data.map((video) => ({
+            data: action.payload.map((video: iVideo) => ({
                 ...video,
                 // not sure if i was allowed to change json data, so doing it here. ideally this should be don on backend.
                 slug: video.name.toLowerCase().replace(/ +/g, '-'),
             })),
         }),
     },
-    initialState,
+    initialState
 );
 
 export default videosReducer;
