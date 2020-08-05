@@ -1,15 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import mediaQueries from "../data/mediaQueries";
+
 const Wrapper = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    
+    @media ${mediaQueries.MEDIUM} { 
+        flex-direction: column;
+    }
 `;
 
 const ImageContainer = styled.div`
-    width: 250px;
+    width: 200px;
     position: relative;
     overflow: hidden;
+    margin-bottom: 10px;
+    
+    @media ${mediaQueries.MEDIUM} { 
+        width: 250px;
+    }
     
     :after {
         content: '';
@@ -20,7 +31,11 @@ const ImageContainer = styled.div`
 `;
 
 const Title = styled.div`
-    margin: 10px 0 23px;
+    margin: 0 0 25px 25px;
+    
+    @media ${mediaQueries.MEDIUM} { 
+        margin: 0 0 25px;
+    }
 `;
 
 const Image = styled.img`

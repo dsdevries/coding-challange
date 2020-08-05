@@ -12,24 +12,31 @@ import PropTypes from "prop-types";
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
+    flex: 1;
+    overflow: hidden;
     
     @media ${mediaQueries.MEDIUM} { 
         margin-left: 50px;
+        overflow: visible;
     }
 `;
 
 const Title = styled.h2`
-    margin-top: 32px;
+    margin-top: 15px;
+    
+    @media ${mediaQueries.MEDIUM} { 
+        margin-top: 32px;
+    }
 `;
 
 const ScrollWrapper = styled.div`
     overflow: scroll;
-    height: 500px;
     padding-right: 20px;
     margin-right: -20px;
+    height: 100%;
     
     @media ${mediaQueries.MEDIUM} { 
-        max-height: calc(100vh - 120px);
+        height: calc(100vh - 120px);
     }
 `;
 

@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     mid-width: 200px;
     display: flex;
     flex-direction: column;
+    max-height: 100vh;
     
     @media ${mediaQueries.MEDIUM} { 
         flex-direction: row;

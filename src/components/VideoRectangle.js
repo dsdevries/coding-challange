@@ -19,10 +19,13 @@ import HLSSource from './HLSSource';
 
 const Wrapper = styled.div`
     width: 100%;
-    max-height: 30vh;
+`;
+
+const VideoContainer = styled.div`
+    height: 35vh;
 
     @media ${mediaQueries.MEDIUM} { 
-        max-height: 500px;
+        height: calc(100vh - 120px);
     }
 `;
 
@@ -38,20 +41,27 @@ const VideoRectangle = ({ videoSelected }) => {
     return (
         <Wrapper>
             <h1>{videoSelected && videoSelected.name}</h1>
-            <Player>
-                <HLSSource
-                    isVideoChild
-                    src={videoSource}
-                />
-                <ControlBar>
-                    <ReplayControl seconds={10} order={1.1} />
-                    <ForwardControl seconds={30} order={1.2} />
-                    <CurrentTimeDisplay order={4.1} />
-                    <TimeDivider order={4.2} />
-                    <PlaybackRateMenuButton rates={[5, 2, 1, 0.5, 0.1]} order={7.1} />
-                    <VolumeMenuButton disabled />
-                </ControlBar>
-            </Player>
+            <VideoContainer>
+
+                <Player
+                    height={'100%'}
+                    width={'100%'}
+                    fluid={false}
+                >
+                    <HLSSource
+                        isVideoChild
+                        src={videoSource}
+                    />
+                    <ControlBar>
+                        <ReplayControl seconds={10} order={1.1} />
+                        <ForwardControl seconds={30} order={1.2} />
+                        <CurrentTimeDisplay order={4.1} />
+                        <TimeDivider order={4.2} />
+                        <PlaybackRateMenuButton rates={[5, 2, 1, 0.5, 0.1]} order={7.1} />
+                        <VolumeMenuButton disabled />
+                    </ControlBar>
+                </Player>
+            </VideoContainer>
         </Wrapper>
     );
 }
