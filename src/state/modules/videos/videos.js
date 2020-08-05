@@ -74,6 +74,6 @@ export const getVideos = state => {
         links: {
             next: page === page_count ? null : `?${nextSearchParams.toString()}`,
         },
-        data: data.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE),
+        data: data.slice(0 , page * PAGE_SIZE),
     };
 };

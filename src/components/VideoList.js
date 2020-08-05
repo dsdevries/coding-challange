@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import { useHistory } from "react-router-dom";
+import { Waypoint } from 'react-waypoint';
 import styled from 'styled-components';
 
 import {getVideos} from "../state/modules/videos/videos";
@@ -12,27 +13,44 @@ const Wrapper = styled.div`
     flex-direction: column;
 `;
 
+const ScrollContainer = styled.div`
+    overflow: scroll;
+    height: 500px;
+`;
+
 const VideoList = ({ videos }) => {
     const history = useHistory();
+
+    const handleWaypointEnter = () => {
+        if (!videos || !videos.links || !videos.links.next) {
+            return;
+        }
+        
+        history.push({
+            search: videos.links.next,
+        });
+    }
 
     return (
         <Wrapper>
             <h2>Up Next:</h2>
-
-            {
-                videos && videos.data && videos.data.map((video, i) => {
-                    return (
-                        <VideoThumbnail
-                            key={`${video.name}-thumbnail`}
-                            name={video.name}
-                            onClick={() => {
-                                history.push(`/${video.slug}`)
-                            }}
-                            src={video.thumbnail}
-                        />
-                    );
-                })
-            }
+            <ScrollContainer>
+                {
+                    videos && videos.data && videos.data.map((video, i) => {
+                        return (
+                            <VideoThumbnail
+                                key={`${video.name}-thumbnail`}
+                                name={video.name}
+                                onClick={() => {
+                                    history.push(`/${video.slug}`)
+                                }}
+                                src={video.thumbnail}
+                            />
+                        );
+                    })
+                }
+                <Waypoint onEnter={handleWaypointEnter}></Waypoint>
+            </ScrollContainer>
         </Wrapper>
     );
 }

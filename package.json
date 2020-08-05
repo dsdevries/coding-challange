@@ -43,7 +43,8 @@
     "history": "4.10.1",
     "prop-types": "^15.7.2",
     "react-redux": "^7.2.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-waypoint": "^9.0.3"
   },
   "proxy": "http://localhost:8000"
 }
