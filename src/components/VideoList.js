@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { Waypoint } from 'react-waypoint';
 import styled from 'styled-components';
 
+import mediaQueries from "../data/mediaQueries";
 import {getVideos} from "../state/modules/videos/selectors";
 import VideoThumbnail from './VideoThumbnail';
 import PropTypes from "prop-types";
@@ -11,11 +12,25 @@ import PropTypes from "prop-types";
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
+    
+    @media ${mediaQueries.MEDIUM} { 
+        margin-left: 50px;
+    }
 `;
 
-const ScrollContainer = styled.div`
+const Title = styled.h2`
+    margin-top: 32px;
+`;
+
+const ScrollWrapper = styled.div`
     overflow: scroll;
     height: 500px;
+    padding-right: 20px;
+    margin-right: -20px;
+    
+    @media ${mediaQueries.MEDIUM} { 
+        max-height: calc(100vh - 120px);
+    }
 `;
 
 const VideoList = ({ videos }) => {
@@ -33,8 +48,8 @@ const VideoList = ({ videos }) => {
 
     return (
         <Wrapper>
-            <h2>Up Next:</h2>
-            <ScrollContainer>
+            <Title>Up Next</Title>
+            <ScrollWrapper>
                 {
                     videos && videos.data && videos.data.map((video, i) => {
                         return (
@@ -50,7 +65,7 @@ const VideoList = ({ videos }) => {
                     })
                 }
                 <Waypoint onEnter={handleWaypointEnter}></Waypoint>
-            </ScrollContainer>
+            </ScrollWrapper>
         </Wrapper>
     );
 }

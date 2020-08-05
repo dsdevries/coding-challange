@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
+import mediaQueries from "../data/mediaQueries";
 import VideoList from './VideoList';
 import VideoRectangle from './VideoRectangle';
 
@@ -9,10 +10,10 @@ const Wrapper = styled.div`
     width: 90%;
     mid-width: 200px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     
-    VideoList {
-        margin-left: 15px;
+    @media ${mediaQueries.MEDIUM} { 
+        flex-direction: row;
     }
 `;
 

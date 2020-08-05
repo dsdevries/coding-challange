@@ -35,7 +35,7 @@ export const getVideos = state => {
         page_count,
         total_count,
         links: {
-            next: page === page_count ? null : `?${searchParams.toString()}`,
+            next: page >= page_count ? null : `?${searchParams.toString()}`,
         },
         data: data.slice(0 , page * PAGE_SIZE),
     };

@@ -13,11 +13,17 @@ import {
     VolumeMenuButton
 } from 'video-react';
 
+import mediaQueries from "../data/mediaQueries";
 import { getSelectedVideo } from "../state/modules/videos/selectors";
 import HLSSource from './HLSSource';
 
 const Wrapper = styled.div`
-    width: 50%;
+    width: 100%;
+    max-height: 30vh;
+
+    @media ${mediaQueries.MEDIUM} { 
+        max-height: 500px;
+    }
 `;
 
 const VideoRectangle = ({ videoSelected }) => {
