@@ -1,4 +1,4 @@
-import {apiGet} from "./apiRequest";
+import {apiGet} from "../../apiRequest";
 import {NAMESPACE, VIDEOS_ENDPOINT} from "./const";
 import {hydrateVideoData} from "./actions";
 

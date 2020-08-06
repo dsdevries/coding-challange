@@ -2,7 +2,7 @@ import thunk from "redux-thunk";
 import configureMockStore from "redux-mock-store";
 
 import * as thunks from "./thunks";
-import {apiGet} from "./apiRequest";
+import {apiGet} from "../../apiRequest";
 
 jest.mock('./apiRequest');
 
@@ -31,7 +31,7 @@ const expectedActions = [
     { type: 'videos/HYDRATE_VIDEO_DATA', payload: stubData },
 ]
 
-describe("apiRequest", function() {
+describe("videos thunks", function() {
     let store;
 
     beforeEach(function () {

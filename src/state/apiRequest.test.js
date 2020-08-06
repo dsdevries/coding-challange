@@ -1,11 +1,11 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 
-import gateway from "../../../util/gateway";
+import gateway from "../util/gateway";
 import * as requestMethods from './apiRequest';
 import {apiRequest} from "./apiRequest";
 
-jest.mock('../../../util/gateway');
+jest.mock('../util/gateway');
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

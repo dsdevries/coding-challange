@@ -1,5 +1,5 @@
 import { createAction } from 'redux-actions';
-import gateway from "../../../util/gateway";
+import gateway from "../util/gateway";
 
 /**
  * Simple wrapper action to execute a gateway request. Will dispatch an async action (action with
