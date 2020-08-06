@@ -6,7 +6,7 @@ const FETCH_VIDEOS = `${NAMESPACE}/FETCH_VIDEOS`;
 
 export const fetchVideos = () => dispatch => dispatch(apiGet(FETCH_VIDEOS, VIDEOS_ENDPOINT)).payload.then(
     response => {
-        dispatch(hydrateVideoData(response.data));
+        dispatch(hydrateVideoData(response.data.videos));
     },
 );
 

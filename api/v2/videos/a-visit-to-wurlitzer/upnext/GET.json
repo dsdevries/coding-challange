@@ -1,0 +1,47 @@
+{
+    "meta": {
+        "page": 2,
+        "per_page": 5,
+        "page_count": 3,
+        "total_count": 14,
+        "links": {
+            "first": "/videos/a-visit-to-wurlitzer/upnext?page=1&per_page=5",
+            "previous": "/videos/a-visit-to-wurlitzer/upnext?page=1&per_page=5",
+            "self": "/videos/a-visit-to-wurlitzer/upnext?page=2&per_page=5",
+            "next": "/videos/a-visit-to-wurlitzer/upnext?page=3&per_page=5",
+            "last": "/videos/a-visit-to-wurlitzer/upnext?page=3&per_page=5"
+        }
+    },
+    "data": [
+        {
+            "slug": "cooperation-vs-gentrification",
+            "name": "Cooperation vs Gentrification",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/7/CooperationVsGentrification.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/7/cooperation-vs-gentrification-thumb.jpg"
+        },
+        {
+            "slug": "gallery-8",
+            "name": "Gallery 8",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/9/Gallery8.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/9/gallery-8-thumb.jpg"
+        },
+        {
+            "slug": "how-a-watch-works",
+            "name": "How a Watch Works",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/1/HowaWatc1949.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/1/how-a-watch-works-thumb.jpg"
+        },
+        {
+            "slug": "living-stereo",
+            "name": "Living Stereo",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/2/LivingSt1958.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/2/living-stereo-thumb.jpg"
+        },
+        {
+            "slug": "microsoft-research",
+            "name": "Microsoft Research",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/10/MicrosoftResearch.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/10/microsoft-research-thumb.jpg"
+        }
+    ]
+}

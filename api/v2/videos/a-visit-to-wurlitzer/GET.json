@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "page": 1,
+        "per_page": 5,
+        "page_count": 3,
+        "total_count": 14,
+        "links": {
+            "first": "/videos/a-visit-to-wurlitzer/upnext?page=1&per_page=5",
+            "previous": null,
+            "self": "/videos/a-visit-to-wurlitzer/upnext?page=1&per_page=5",
+            "next": "/videos/a-visit-to-wurlitzer/upnext?page=2&per_page=5",
+            "last": "/videos/a-visit-to-wurlitzer/upnext?page=3&per_page=5"
+        }
+    },
+    "data":         {
+        "slug": "a-visit-to-wurlitzer",
+        "name": "A Visit to Wurlitzer",
+        "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/4/VisittoW1950.m3u8",
+        "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/4/a-visit-to-wurlitzer-thumb.jpg",
+        "upnext" : [
+            {
+                "slug": "about-bananas",
+                "name": "About Bananas",
+                "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/11/AboutBananas.m3u8",
+                "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/11/about-bananas-thumb.jpg"
+            },
+            {
+                "slug": "all-star-swing-festival",
+                "name": "All Star Swing Festival",
+                "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/5/AllStarSwingFestival.m3u8",
+                "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/5/all-star-swing-festival-thumb.jpg"
+            },
+            {
+                "slug": "build-your-vocabulary",
+                "name": "Build Your Vocabulary",
+                "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/12/BuildYourVocabulary.m3u8",
+                "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/12/build-your-vocabulary-thumb.jpg"
+            },
+            {
+                "slug": "chicken-of-tomorrow",
+                "name": "Chicken of Tomorrow",
+                "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/13/ChickenOfTomorrow.m3u8",
+                "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/13/chicken-of-tomorrow-thumb.jpg"
+            },
+            {
+                "slug": "coney-island",
+                "name": "Coney Island",
+                "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/6/ConeyIsland.m3u8",
+                "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/6/coney-island-thumb.jpg"
+            }
+        ]
+    }
+}

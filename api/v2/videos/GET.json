@@ -1,0 +1,107 @@
+{
+    "meta": {
+        "page": 1,
+        "per_page": 5,
+        "page_count": 3,
+        "total_count": 15,
+        "links": {
+            "first": "/videos?page=1&per_page=5",
+            "previous": null,
+            "self": "/videos?page=1&per_page=5",
+            "next": "/videos?page=2&per_page=5",
+            "last": "/videos?page=3&per_page=5"
+        }
+    },
+    "data": [
+        {
+            "slug": "a-visit-to-wurlitzer",
+            "name": "A Visit to Wurlitzer",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/4/VisittoW1950.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/4/a-visit-to-wurlitzer-thumb.jpg"
+        },
+        {
+            "slug": "about-bananas",
+            "name": "About Bananas",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/11/AboutBananas.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/11/about-bananas-thumb.jpg"
+        },
+        {
+            "slug": "all-star-swing-festival",
+            "name": "All Star Swing Festival",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/5/AllStarSwingFestival.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/5/all-star-swing-festival-thumb.jpg"
+        },
+        {
+            "slug": "build-your-vocabulary",
+            "name": "Build Your Vocabulary",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/12/BuildYourVocabulary.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/12/build-your-vocabulary-thumb.jpg"
+        },
+        {
+            "slug": "chicken-of-tomorrow",
+            "name": "Chicken of Tomorrow",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/13/ChickenOfTomorrow.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/13/chicken-of-tomorrow-thumb.jpg"
+        },
+        {
+            "slug": "coney-island",
+            "name": "Coney Island",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/6/ConeyIsland.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/6/coney-island-thumb.jpg"
+        },
+        {
+            "slug": "the-corvair-in-action",
+            "name": "The Corvair in Action",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/0/Corvairi1960.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/0/the-corvair-in-action-thumb.jpg"
+        },
+        {
+            "slug": "how-a-watch-works",
+            "name": "How a Watch Works",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/1/HowaWatc1949.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/1/how-a-watch-works-thumb.jpg"
+        },
+        {
+            "slug": "living-stereo",
+            "name": "Living Stereo",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/2/LivingSt1958.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/2/living-stereo-thumb.jpg"
+        },
+        {
+            "slug": "this-is-coffee",
+            "name": "This Is Coffee",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/3/ThisisCo1961.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/3/this-is-coffee-thumb.jpg"
+        },
+        {
+            "slug": "cooperation-vs-gentrification",
+            "name": "Cooperation vs Gentrification",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/7/CooperationVsGentrification.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/7/cooperation-vs-gentrification-thumb.jpg"
+        },
+        {
+            "slug": "the-bronx-ultimate-guide",
+            "name": "The Bronx Ultimate Guide",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/8/TheBronxUltimateGuide.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/8/the-bronx-ultimate-guide-thumb.jpg"
+        },
+        {
+            "slug": "gallery-8",
+            "name": "Gallery 8",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/9/Gallery8.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/9/gallery-8-thumb.jpg"
+        },
+        {
+            "slug": "microsoft-research",
+            "name": "Microsoft Research",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/10/MicrosoftResearch.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/10/microsoft-research-thumb.jpg"
+        },
+        {
+            "slug": "private-life-of-a-cat",
+            "name": "Private Life of a Cat",
+            "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/14/PrivateLifeOfACat.m3u8",
+            "thumbnail": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/14/private-life-of-a-cat-thumb.jpg"
+        }
+    ]
+}

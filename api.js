@@ -3,6 +3,6 @@ const apiMocker = require('connect-api-mocker');
 
 const app = express();
 
-app.use(apiMocker('/api','mocks/api'));
+app.use(apiMocker('/api','./api/'));
 
 app.listen(8000);

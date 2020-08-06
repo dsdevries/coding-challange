@@ -1,6 +1,5 @@
 {
-    "meta": {},
-    "data": [
+    "videos": [
         {
             "name": "The Corvair in Action",
             "path": "https://fed-dss-challenge-qa.s3.amazonaws.com/assets/vid/0/Corvairi1960.m3u8",
