@@ -13,7 +13,9 @@ const stubData = [{
 }];
 
 const mockPromise = Promise.resolve({
-    data: stubData
+    data: {
+        videos: stubData
+    }
 });
 
 apiGet.mockImplementation(()=> {
