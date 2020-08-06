@@ -4,7 +4,7 @@ import configureMockStore from "redux-mock-store";
 import * as thunks from "./thunks";
 import {apiGet} from "../../apiRequest";
 
-jest.mock('./apiRequest');
+jest.mock('../../apiRequest');
 
 const stubData = [{
     name: 'stub name',
