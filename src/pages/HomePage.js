@@ -7,7 +7,7 @@ import { fetchVideos } from "../state/modules/videos/thunks";
 
 const HomePage = ({ fetchVideos}) => {
   useEffect(() => {
-    fetchVideos();
+      fetchVideos();
   }, [fetchVideos]);
 
   return (

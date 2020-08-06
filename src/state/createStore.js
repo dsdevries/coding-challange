@@ -5,7 +5,7 @@ import { routerMiddleware } from 'connected-react-router'
 
 import createRootReducer from './createRootReducer';
 
-export default history => {
+export default (history, initialState = {}) => {
   const middleware = [
     routerMiddleware(history),
     thunk,
@@ -13,6 +13,7 @@ export default history => {
 
   const store = createStore(
     createRootReducer(history),
+    initialState,
     composeWithDevTools(applyMiddleware(...middleware)),
   );
 
