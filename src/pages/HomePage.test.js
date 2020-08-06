@@ -1,8 +1,7 @@
 import React from 'react';
-import '@testing-library/jest-dom';
 import HomePage from "./HomePage";
 import { fetchVideos } from "../state/modules/videos/thunks";
-import {render} from '../../test/testUtils';
+import { renderWithStore } from '../../test/testUtils';
 
 jest.mock('../components/VideoPlayer' , () => {
     return {
@@ -16,7 +15,7 @@ jest.mock('../state/modules/videos/thunks', () => ({
 
 describe("HomePage", function() {
     it('Should render the HomePage and fetch the videos', () => {
-        const container = render(<HomePage/>, {});
+        const container = renderWithStore(<HomePage/>, {});
 
         expect(fetchVideos).toHaveBeenCalled();
         expect(container.queryByTestId('mockPlayer')).toBeVisible();

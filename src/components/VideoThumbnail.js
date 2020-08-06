@@ -50,11 +50,12 @@ export default function VideoThumbnail({ src, name, onClick }) {
     return (
         <Wrapper
             onClick={onClick}
+            data-testid='thumbnail-wrapper'
         >
             <ImageContainer>
-                <Image alt='name' src={src} />
+                <Image alt='name' src={src} data-testid='thumbnail-image'/>
             </ImageContainer>
-            <Title>{name}</Title>
+            <Title data-testid='thumbnail-title'>{name}</Title>
         </Wrapper>
     );
 }
