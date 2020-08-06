@@ -1,9 +1,9 @@
 const stubVideos = [
     {
         name: 'stub name 1',
-        thumbnail: 'stub thumbnail a-visit-to-wurlitzer',
-        path: 'stub path a-visit-to-wurlitzer',
-        slug: 'stub-slug-a-visit-to-wurlitzer',
+        thumbnail: 'stub thumbnail 1',
+        path: 'stub path 1',
+        slug: 'stub-slug-1',
     },
     {
         name: 'stub name 2',

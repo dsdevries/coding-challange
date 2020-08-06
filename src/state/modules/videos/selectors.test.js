@@ -70,7 +70,7 @@ describe("videos selectors", function() {
 
         const result= selectors.getVideos(state);
         expect(result.data.length).toBe(5);
-        expect(result.data[0].name).toEqual('stub name a-visit-to-wurlitzer');
+        expect(result.data[0].name).toEqual('stub name 1');
         expect(result.data[1].name).toEqual('stub name 10');
         expect(result.data[4].name).toEqual('stub name 4');
     });
@@ -95,7 +95,7 @@ describe("videos selectors", function() {
 
         const result= selectors.getVideos(state);
         expect(result.data.length).toBe(10);
-        expect(result.data[0].name).toEqual('stub name a-visit-to-wurlitzer');
+        expect(result.data[0].name).toEqual('stub name 1');
         expect(result.data[1].name).toEqual('stub name 10');
         expect(result.data[9].name).toEqual('stub name 9');
     });
@@ -120,7 +120,7 @@ describe("videos selectors", function() {
 
         const result= selectors.getVideos(state);
         expect(result.data.length).toBe(9);
-        expect(result.data[0].name).toEqual('stub name a-visit-to-wurlitzer');
+        expect(result.data[0].name).toEqual('stub name 1');
         expect(result.data[1].name).toEqual('stub name 10');
         expect(result.data[4].name).toEqual('stub name 5');
         expect(result.data[8].name).toEqual('stub name 9');
