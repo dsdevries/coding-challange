@@ -1,15 +1,11 @@
 {
     "meta": {
-        "page": 2,
         "per_page": 5,
         "page_count": 3,
         "total_count": 14,
         "links": {
-            "first": "/videos/a-visit-to-wurlitzer/upnext?page=1&per_page=5",
-            "previous": "/videos/a-visit-to-wurlitzer/upnext?page=1&per_page=5",
-            "self": "/videos/a-visit-to-wurlitzer/upnext?page=2&per_page=5",
-            "next": "/videos/a-visit-to-wurlitzer/upnext?page=3&per_page=5",
-            "last": "/videos/a-visit-to-wurlitzer/upnext?page=3&per_page=5"
+            "self": "/videos/a-visit-to-wurlitzer/upnext?start=7&per_page=5",
+            "next": "/videos/a-visit-to-wurlitzer/upnext?start=14&per_page=5"
         }
     },
     "data": [
