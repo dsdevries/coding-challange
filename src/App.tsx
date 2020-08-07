@@ -1,6 +1,5 @@
 import { ConnectedRouter as Router } from 'connected-react-router';
 import {History} from "history";
-import PropTypes from 'prop-types';
 import React from 'react';
 import { Provider } from 'react-redux';
 import {Store} from "redux";
@@ -26,10 +25,5 @@ function App({ history, store }: AppProps) {
     </div>
   );
 }
-
-App.propTypes = {
-    history: PropTypes.object.isRequired,
-    store: PropTypes.object.isRequired,
-};
 
 export default App;

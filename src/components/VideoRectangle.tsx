@@ -16,6 +16,7 @@ import mediaQueries from "../data/mediaQueries";
 import { getSelectedVideo } from "../state/modules/videos/selectors";
 import {Video} from "../state/modules/videos/video";
 import HLSSource from './HLSSource';
+import {RootState} from "../index";
 
 type VideoRectangleProps = {
     videoSelected: Video
@@ -64,7 +65,7 @@ const VideoRectangle = ({ videoSelected }: VideoRectangleProps) => {
     );
 }
 
-const mapStateToProps = (state:any) => {
+const mapStateToProps = (state:RootState) => {
     return {
         videoSelected: getSelectedVideo(state),
     };

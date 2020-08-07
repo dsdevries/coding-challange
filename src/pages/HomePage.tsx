@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import VideoPlayer from "../components/VideoPlayer";
 import { fetchVideos } from "../state/modules/videos/thunks";
+import {AppDispatch} from "../index";
 
 type HomePagesProps = {
     fetchVideos: () => void
@@ -20,9 +21,9 @@ const HomePage = ({ fetchVideos}: HomePagesProps) => {
   );
 };
 
-const mapDispatchToProps = (dispatch:any) => ({
+const mapDispatchToProps = (dispatch:AppDispatch) => ({
     fetchVideos: () => {
-        dispatch(fetchVideos());
+        dispatch<any>(fetchVideos());
     },
 });
 

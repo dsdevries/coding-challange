@@ -8,6 +8,7 @@ import mediaQueries from "../data/mediaQueries";
 import {getVideos} from "../state/modules/videos/selectors";
 import {Video} from "../state/modules/videos/video";
 import VideoThumbnail from './VideoThumbnail';
+import {RootState} from "../index";
 
 type VideoListProps = {
     videos: {
@@ -88,7 +89,7 @@ const VideoList = ({ videos }: VideoListProps) => {
     );
 }
 
-const mapStateToProps = (state:any) => {
+const mapStateToProps = (state:RootState) => {
     return {
         videos: getVideos(state),
     };
