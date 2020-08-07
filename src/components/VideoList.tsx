@@ -6,8 +6,21 @@ import styled from 'styled-components';
 
 import mediaQueries from "../data/mediaQueries";
 import {getVideos} from "../state/modules/videos/selectors";
+import {Video} from "../state/modules/videos/video";
 import VideoThumbnail from './VideoThumbnail';
-import PropTypes from "prop-types";
+
+type VideoListProps = {
+    videos: {
+        page: number,
+        per_page: number,
+        page_count: number,
+        total_count: number,
+        links: {
+            next: string | null
+        },
+        data: Array<Video>,
+    };
+};
 
 const Wrapper = styled.div`
     display: flex;
@@ -40,7 +53,7 @@ const ScrollWrapper = styled.div`
     }
 `;
 
-const VideoList = ({ videos }) => {
+const VideoList = ({ videos }: VideoListProps) => {
     const history = useHistory();
 
     const handleWaypointEnter = () => {
@@ -58,7 +71,7 @@ const VideoList = ({ videos }) => {
             <Title>Up Next</Title>
             <ScrollWrapper>
                 {
-                    videos && videos.data && videos.data.map((video, i) => {
+                    videos && videos.data && videos.data.map((video) => {
                         return (
                             <VideoThumbnail
                                 key={`${video.name}-thumbnail`}
@@ -71,17 +84,13 @@ const VideoList = ({ videos }) => {
                         );
                     })
                 }
-                <Waypoint onEnter={handleWaypointEnter}></Waypoint>
+                <Waypoint onEnter={handleWaypointEnter} />
             </ScrollWrapper>
         </Wrapper>
     );
 }
 
-VideoList.propTypes = {
-    videos: PropTypes.object,
-};
-
-const mapStateToProps = state => {
+const mapStateToProps = (state:any) => {
     return {
         videos: getVideos(state),
     };

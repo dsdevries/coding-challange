@@ -1,4 +1,4 @@
-export interface iVideo {
+export type Video = {
     name: string,
     path: string,
     thumbnail: string,

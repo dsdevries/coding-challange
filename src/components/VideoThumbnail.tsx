@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {MouseEvent} from 'react';
 import styled from 'styled-components';
 
 import mediaQueries from "../data/mediaQueries";
+
+type VideoThumbnailProps = {
+    src: string;
+    name: string;
+    onClick?: (event: MouseEvent<HTMLDivElement>) => void;
+};
 
 const Wrapper = styled.div`
     display: flex;
@@ -46,12 +52,9 @@ const Image = styled.img`
     border-radius: 4px;
 `;
 
-export default function VideoThumbnail({ src, name, onClick }) {
+export default function VideoThumbnail({ src, name, onClick }:VideoThumbnailProps) {
     return (
-        <Wrapper
-            onClick={onClick}
-            data-testid='thumbnail-wrapper'
-        >
+        <Wrapper onClick={onClick} data-testid='thumbnail-wrapper'>
             <ImageContainer>
                 <Image alt='name' src={src} data-testid='thumbnail-image'/>
             </ImageContainer>

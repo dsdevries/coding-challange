@@ -1,5 +1,4 @@
-import PropTypes from "prop-types";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
 import { connect } from "react-redux";
 import styled from 'styled-components';
 import {
@@ -15,7 +14,12 @@ import {
 
 import mediaQueries from "../data/mediaQueries";
 import { getSelectedVideo } from "../state/modules/videos/selectors";
+import {Video} from "../state/modules/videos/video";
 import HLSSource from './HLSSource';
+
+type VideoRectangleProps = {
+    videoSelected: Video
+};
 
 const Wrapper = styled.div`
     width: 100%;
@@ -29,8 +33,8 @@ const VideoContainer = styled.div`
     }
 `;
 
-const VideoRectangle = ({ videoSelected }) => {
-    const [videoSource, setVideoSource] = useState(null);
+const VideoRectangle = ({ videoSelected }: VideoRectangleProps) => {
+    const [videoSource, setVideoSource] = useState<string>('');
 
     useEffect(() => {
         // I rather use optional chaining for the next line, but i don't have the time to setup babel or the like
@@ -48,10 +52,7 @@ const VideoRectangle = ({ videoSelected }) => {
                     width={'100%'}
                     fluid={false}
                 >
-                    <HLSSource
-                        isVideoChild
-                        src={videoSource}
-                    />
+                    <HLSSource src={videoSource} />
                     <ControlBar>
                         <ReplayControl seconds={10} order={1.1} />
                         <ForwardControl seconds={30} order={1.2} />
@@ -66,11 +67,7 @@ const VideoRectangle = ({ videoSelected }) => {
     );
 }
 
-VideoRectangle.propTypes = {
-    videoSelected: PropTypes.object,
-};
-
-const mapStateToProps = (state) => {
+const mapStateToProps = (state:any) => {
     return {
         videoSelected: getSelectedVideo(state),
     };

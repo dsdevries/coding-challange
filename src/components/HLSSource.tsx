@@ -12,22 +12,31 @@ import React, { Component } from 'react';
     https://en.wikipedia.org/wiki/HTTP_Live_Streaming
 */
 
-const { Hls } = window;
+interface Window {
+    Hls?: any;
+}
 
-export default class HLSSource extends Component {
-    constructor(props, context) {
-        super(props, context);
-        this.hls = new Hls();
-    }
+const { Hls } = window as Window;
 
-    componentDidUpdate(prevProps) {
+type HLSSourceProps = {
+    src: string;
+    video?: HTMLVideoElement;
+    type?: string;
+};
+
+export default class HLSSource extends Component<HLSSourceProps> {
+    hls = new Hls();
+
+    componentDidUpdate(prevProps:HLSSourceProps) {
         const { src, video } = this.props;
         if (src !== prevProps.src) {
             if (Hls.isSupported()) {
                 this.hls.loadSource(src);
                 this.hls.attachMedia(video);
                 this.hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                    video.play();
+                    if(video) {
+                        video.play();
+                    }
                 });
             }
         }
