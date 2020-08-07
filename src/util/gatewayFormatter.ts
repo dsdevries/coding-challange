@@ -4,7 +4,7 @@ export const errorFormatter = (error: AxiosError) => {
   if (error && error.response && error.response.data && error.response.data.error) {
     // @ts-ignore
     const response = { config: error.config, ...error.response, ...error.response.data };
-    // delete data to avoid confusion
+    // delete enum to avoid confusion
     delete response.data;
     return response;
   }

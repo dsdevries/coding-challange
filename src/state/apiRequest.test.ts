@@ -24,7 +24,7 @@ describe("apiRequest", function() {
         store = mockStore({});
     });
 
-    it("should create an action and call the gateway without data when method is get", function () {
+    it("should create an action and call the gateway without enum when method is get", function () {
         store.dispatch(requestMethods.apiRequest(
             'get',
             TEST_ACTION,
@@ -37,7 +37,7 @@ describe("apiRequest", function() {
         expect(gateway.get).toHaveBeenCalledWith(TEST_PATH, TEST_OPTIONS);
     })
 
-    it("should create an action and call the gateway without data when method is get", function () {
+    it("should create an action and call the gateway without enum when method is get", function () {
         store.dispatch(requestMethods.apiRequest(
             'delete',
             TEST_ACTION,
@@ -50,7 +50,7 @@ describe("apiRequest", function() {
         expect(gateway.delete).toHaveBeenCalledWith(TEST_PATH, TEST_OPTIONS);
     })
 
-    it("should create an action and call the gateway without data when method is get", function () {
+    it("should create an action and call the gateway without enum when method is get", function () {
         store.dispatch(requestMethods.apiRequest(
             'post',
             TEST_ACTION,

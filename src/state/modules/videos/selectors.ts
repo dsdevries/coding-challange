@@ -2,7 +2,7 @@ import {createMatchSelector} from "connected-react-router";
 import {match} from 'react-router';
 import {RoutePaths} from "../../../Routes";
 import {NAMESPACE, PAGE_SIZE} from "./const";
-import {Video} from "./video";
+import {Video} from "../../../types/app-types";
 
 interface routeMatch extends match {
     params : {

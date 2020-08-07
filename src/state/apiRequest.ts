@@ -36,7 +36,7 @@ type ApiRequestRestArgs = (
  * @param {string} actionType The 'type' property of the dispatched action is set to this value
  * defined in _Injectables.js_
  * @param {string} path The path to the endpoint to request
- * @param {object} [data=null] Object with data to send with the API request
+ * @param {object} [data=null] Object with enum to send with the API request
  * @param {object} [options={}] Object with additional options passed to the gateway. Please see
  * the gateway documentation for more information
  */

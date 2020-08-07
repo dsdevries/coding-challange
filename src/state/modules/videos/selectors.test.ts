@@ -3,7 +3,7 @@ import stubVideo from '../../../../test/stubVideo';
 import stubVideos from "../../../../test/stubVideos";
 
 import * as selectors from './selectors';
-import {Video} from "./video";
+import {Video} from "../../../types/app-types";
 
 jest.mock('connected-react-router');
 

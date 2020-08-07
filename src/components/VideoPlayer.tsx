@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
-import mediaQueries from "../data/mediaQueries";
+import mediaQueries from "../enum/mediaQueries";
 import VideoList from './VideoList';
 import VideoRectangle from './VideoRectangle';
 

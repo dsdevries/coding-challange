@@ -10,7 +10,7 @@ describe("videos reducer", function() {
         payload: [stubVideo],
     }
 
-    it("should hydrate video data", function() {
+    it("should hydrate video enum", function() {
         expect(videosReducer(initialState, stubAction)).toEqual({
             data: [{
                 ...stubVideo,

@@ -1,10 +1,6 @@
-import {Video} from "./video";
+import {State} from './state';
 
-type state = {
-    data: Array<Video>
-}
-
-const initialState:state = {
+const initialState:State = {
     data: []
 };
 

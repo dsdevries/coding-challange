@@ -4,9 +4,9 @@ import { useHistory } from "react-router-dom";
 import { Waypoint } from 'react-waypoint';
 import styled from 'styled-components';
 
-import mediaQueries from "../data/mediaQueries";
+import mediaQueries from "../enum/mediaQueries";
 import {getVideos} from "../state/modules/videos/selectors";
-import {Video} from "../state/modules/videos/video";
+import {Video} from "../types/app-types";
 import VideoThumbnail from './VideoThumbnail';
 import {RootState} from "../index";
 

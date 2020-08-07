@@ -1,7 +1,7 @@
 import React, {MouseEvent} from 'react';
 import styled from 'styled-components';
 
-import mediaQueries from "../data/mediaQueries";
+import mediaQueries from "../enum/mediaQueries";
 
 type VideoThumbnailProps = {
     src: string;
