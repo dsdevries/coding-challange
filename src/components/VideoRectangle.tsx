@@ -37,16 +37,13 @@ const VideoRectangle = ({ videoSelected }: VideoRectangleProps) => {
     const [videoSource, setVideoSource] = useState<string>('');
 
     useEffect(() => {
-        // I rather use optional chaining for the next line, but i don't have the time to setup babel or the like
-        // eslint-disable-next-line
-        setVideoSource(videoSelected && videoSelected.path || '');
+        setVideoSource(videoSelected?.path || '');
     }, [videoSelected, videoSource]);
 
     return (
         <Wrapper>
             <h1>{videoSelected && videoSelected.name}</h1>
             <VideoContainer>
-
                 <Player
                     height={'100%'}
                     width={'100%'}

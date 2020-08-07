@@ -57,13 +57,11 @@ const VideoList = ({ videos }: VideoListProps) => {
     const history = useHistory();
 
     const handleWaypointEnter = () => {
-        if (!videos || !videos.links || !videos.links.next) {
-            return;
+        if (videos?.links?.next) {
+            history.push({
+                search: videos.links.next,
+            });
         }
-
-        history.push({
-            search: videos.links.next,
-        });
     }
 
     return (
@@ -71,7 +69,7 @@ const VideoList = ({ videos }: VideoListProps) => {
             <Title>Up Next</Title>
             <ScrollWrapper>
                 {
-                    videos && videos.data && videos.data.map((video) => {
+                    videos?.data?.map((video) => {
                         return (
                             <VideoThumbnail
                                 key={`${video.name}-thumbnail`}

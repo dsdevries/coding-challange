@@ -15,7 +15,7 @@ jest.mock('../state/modules/videos/thunks', () => ({
 
 describe("HomePage", function() {
     it('Should render the HomePage and fetch the videos', () => {
-        const container = renderWithStore(<HomePage/>, {});
+        const container = renderWithStore(<HomePage/>);
 
         expect(fetchVideos).toHaveBeenCalled();
         expect(container.queryByTestId('mockPlayer')).toBeVisible();
