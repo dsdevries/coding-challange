@@ -1,4 +1,4 @@
-import configureMockStore from 'redux-mock-store'
+import configureMockStore, {MockStore} from 'redux-mock-store'
 import thunk from 'redux-thunk'
 
 import gateway from "../util/gateway";
@@ -18,7 +18,7 @@ const TEST_OPTIONS= {};
 const expectedActions = [{"meta": {"api": {"data": {}, "options": {}}}, "type": "TEST_ACTION"}];
 
 describe("apiRequest", function() {
-    let store;
+    let store:MockStore;
 
     beforeEach(function() {
         store = mockStore({});

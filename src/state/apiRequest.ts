@@ -1,6 +1,33 @@
-import { createAction } from 'redux-actions';
+import {createAction} from 'redux-actions';
+import {AppDispatch} from "../index";
 import gateway from "../util/gateway";
 
+enum Methods {
+    GET = "get",
+    POST = "post",
+    DELETE = "delete",
+    PUT = "put",
+    PATCH = "patch"
+}
+
+type ApiRequest = (
+    method: string,
+    actionType: string,
+    path: string,
+    data?: any,
+    options?: any,
+)=> any
+
+type ApiRequestRestArgs = (
+    actionType: string,
+    path: string,
+    data?: any,
+    options?: any,
+)=> any
+
+
+// @ts-ignore
+// @ts-ignore
 /**
  * Simple wrapper action to execute a gateway request. Will dispatch an async action (action with
  * promise on payload) with additional information about the API call on the meta property.
@@ -13,18 +40,18 @@ import gateway from "../util/gateway";
  * @param {object} [options={}] Object with additional options passed to the gateway. Please see
  * the gateway documentation for more information
  */
-export const apiRequest = (
-  method,
-  actionType,
-  path,
-  data = null,
-  options = {},
-) => dispatch =>
+export const apiRequest:ApiRequest = (
+       method: string,
+       actionType: string,
+       path: string,
+       data:object | null = null,
+       options:object = {},
+   ) => (dispatch:AppDispatch) =>
   dispatch(
     createAction(actionType, null, (payload, meta) => meta)(
-      method === 'delete' || method === 'get'
-        ? gateway[method](path, options)
-        : gateway[method](path, data, options),
+      method === Methods.DELETE || method === Methods.GET
+          //@ts-ignore
+        ? gateway[method](path, options) : gateway[method](path, data, options),
       { api: { data, options } },
     ),
   );
@@ -34,32 +61,32 @@ export const apiRequest = (
  * parameters are the same.
  * @function apiGet
  */
-export const apiGet = (...requestArgs) => apiRequest('get', ...requestArgs);
+export const apiGet:ApiRequestRestArgs = (...requestArgs) => apiRequest(Methods.GET, ...requestArgs);
 
 /**
  * Wrapper action for 'apiRequest()' that sets the method to 'post'. All other
  * parameters are the same.
  * @function apiPost
  */
-export const apiPost = (...requestArgs) => apiRequest('post', ...requestArgs);
+export const apiPost:ApiRequestRestArgs = (...requestArgs) => apiRequest(Methods.POST, ...requestArgs);
 
 /**
  * Wrapper action for 'apiRequest()' that sets the method to 'put'. All other
  * parameters are the same.
  * @function apiPut
  */
-export const apiPut = (...requestArgs) => apiRequest('put', ...requestArgs);
+export const apiPut:ApiRequestRestArgs = (...requestArgs) => apiRequest(Methods.PUT, ...requestArgs);
 
 /**
  * Wrapper action for 'apiRequest()' that sets the method to 'patch'. All other
  * parameters are the same.
  * @function apiPatch
  */
-export const apiPatch = (...requestArgs) => apiRequest('patch', ...requestArgs);
+export const apiPatch:ApiRequestRestArgs = (...requestArgs) => apiRequest(Methods.PATCH, ...requestArgs);
 
 /**
  * Wrapper action for 'apiRequest()' that sets the method to 'delete'. All other
  * parameters are the same.
  * @function apiDelete
  */
-export const apiDelete = (...requestArgs) => apiRequest('delete', ...requestArgs);
+export const apiDelete:ApiRequestRestArgs = (...requestArgs) => apiRequest(Methods.DELETE, ...requestArgs);
