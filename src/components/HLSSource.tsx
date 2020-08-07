@@ -35,7 +35,15 @@ export default class HLSSource extends Component<HLSSourceProps> {
                 this.hls.attachMedia(video);
                 this.hls.on(Hls.Events.MANIFEST_PARSED, () => {
                     if(video) {
-                        video.play();
+                        const playedPromise = video.play();
+                        if (playedPromise) {
+                            playedPromise.catch((e:DOMException) => {
+                                console.log(e)
+                                if (e.name === 'NotAllowedError' || e.name === 'NotSupportedError') {
+                                    console.log(e.name);
+                                }
+                            });
+                        }
                     }
                 });
             }
