@@ -2,8 +2,7 @@ import { handleActions } from 'redux-actions';
 
 import {HYDRATE_VIDEO_DATA} from "./const";
 import initialState from './initialState';
-import {Video} from "../../../types/app-types";
-import {State} from './state';
+import {State, Video} from './videos';
 
 type HydrateVideoAction = {
     payload: Array<Video>;

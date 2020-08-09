@@ -15,7 +15,7 @@ import {
 
 import mediaQueries from "../enum/mediaQueries";
 import { getSelectedVideo } from "../state/modules/videos/selectors";
-import {Video} from "../types/app-types";
+import {Video} from "../state/modules/videos/videos";
 import HLSSource from './HLSSource';
 import {RootState} from "../index";
 

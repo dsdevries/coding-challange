@@ -2,7 +2,7 @@ import stubVideo from '../../../../test/stubVideo';
 import stubVideos from "../../../../test/stubVideos";
 
 import * as selectors from './selectors';
-import {Video} from "../../../types/app-types";
+import {Video} from "./videos";
 
 const slug='stub-name';
 

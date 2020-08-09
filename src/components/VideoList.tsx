@@ -7,21 +7,12 @@ import styled from 'styled-components';
 
 import mediaQueries from "../enum/mediaQueries";
 import {getVideos} from "../state/modules/videos/selectors";
-import {Video} from "../types/app-types";
+import {Videos} from '../state/modules/videos/videos';
 import VideoThumbnail from './VideoThumbnail';
 import {RootState} from "../index";
 
 interface VideoListProps extends RouteComponentProps {
-    videos: {
-        page: number,
-        per_page: number,
-        page_count: number,
-        total_count: number,
-        links: {
-            next: string | null
-        },
-        data: Array<Video>,
-    };
+    videos: Videos;
 }
 
 const Wrapper = styled.div`

@@ -1,6 +1,6 @@
 import {match} from 'react-router';
 import {NAMESPACE, PAGE_SIZE} from "./const";
-import {Video} from "../../../types/app-types";
+import {Video, Videos} from "./videos";
 
 interface RouteMatch extends match {
     params : {
@@ -8,13 +8,13 @@ interface RouteMatch extends match {
     }
 }
 
-export const getSelectedVideo = (state: any, match:RouteMatch) => {
+export const getSelectedVideo = (state: any, match:RouteMatch):Video => {
     return state[NAMESPACE].data.find((video:Video) => {
         return video.slug === match?.params.videoSelected;
     });
 };
 
-const getData = (state:any, match:RouteMatch) => {
+const getData = (state:any, match:RouteMatch):Array<Video> => {
     const selectedVideo = getSelectedVideo(state, match);
 
     return state[NAMESPACE].data.filter((video:Video) => {
@@ -26,7 +26,7 @@ const getData = (state:any, match:RouteMatch) => {
     });
 };
 
-export const getVideos = (state: any, match:RouteMatch) => {
+export const getVideos = (state: any, match:RouteMatch):Videos => {
     const data = getData(state, match);
     const total_count = data.length;
     const page_count = Math.ceil(total_count / PAGE_SIZE);
