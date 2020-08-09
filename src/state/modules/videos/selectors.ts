@@ -1,23 +1,21 @@
-import {createMatchSelector} from "connected-react-router";
 import {match} from 'react-router';
-import {RoutePaths} from "../../../Routes";
 import {NAMESPACE, PAGE_SIZE} from "./const";
 import {Video} from "../../../types/app-types";
 
-interface routeMatch extends match {
+interface RouteMatch extends match {
     params : {
         videoSelected? : string
     }
 }
 
-export const getSelectedVideo = (state: any) => state[NAMESPACE].data.find((video:Video) => {
-    const matchSelector = createMatchSelector(RoutePaths.HOME);
-    const match:routeMatch|null = matchSelector(state);
-    return video.slug === match?.params.videoSelected;
-})
+export const getSelectedVideo = (state: any, match:RouteMatch) => {
+    return state[NAMESPACE].data.find((video:Video) => {
+        return video.slug === match?.params.videoSelected;
+    });
+};
 
-const getData = (state:any) => {
-    const selectedVideo = getSelectedVideo(state);
+const getData = (state:any, match:RouteMatch) => {
+    const selectedVideo = getSelectedVideo(state, match);
 
     return state[NAMESPACE].data.filter((video:Video) => {
         return typeof selectedVideo === 'undefined' || video.name !== selectedVideo.name;
@@ -26,10 +24,10 @@ const getData = (state:any) => {
         if(a.name > b.name) { return 1; }
         return 0;
     });
-}
+};
 
-export const getVideos = (state: any) => {
-    const data = getData(state);
+export const getVideos = (state: any, match:RouteMatch) => {
+    const data = getData(state, match);
     const total_count = data.length;
     const page_count = Math.ceil(total_count / PAGE_SIZE);
     const searchParams = new URLSearchParams(state.router.location.search);

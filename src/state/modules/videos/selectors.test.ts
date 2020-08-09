@@ -1,11 +1,8 @@
-import {createMatchSelector} from "connected-react-router";
 import stubVideo from '../../../../test/stubVideo';
 import stubVideos from "../../../../test/stubVideos";
 
 import * as selectors from './selectors';
 import {Video} from "../../../types/app-types";
-
-jest.mock('connected-react-router');
 
 const slug='stub-name';
 
@@ -20,13 +17,16 @@ describe("videos selectors", function() {
             }
         };
 
-        (createMatchSelector as jest.Mock).mockImplementation(() => () => ({
+        const match = {
+            isExact: true,
+            path: '',
+            url: '',
             params: {
                 videoSelected: slug
             }
-        }));
+        };
 
-        expect(selectors.getSelectedVideo(state)).toEqual({
+        expect(selectors.getSelectedVideo(state, match)).toEqual({
             ...stubVideo,
             slug
         });
@@ -42,13 +42,16 @@ describe("videos selectors", function() {
             }
         };
 
-        (createMatchSelector as jest.Mock).mockImplementation(() => () => ({
+        const match = {
+            isExact: true,
+            path: '',
+            url: '',
             params: {
                 videoSelected: ''
             }
-        }));
+        };
 
-        expect(selectors.getSelectedVideo(state)).toBe(undefined);
+        expect(selectors.getSelectedVideo(state, match)).toBe(undefined);
     });
 
     it('Should return the first 5 video alphabetically ordered by name', () => {
@@ -63,13 +66,16 @@ describe("videos selectors", function() {
             },
         };
 
-        (createMatchSelector as jest.Mock).mockImplementation(() => () => ({
+        const match = {
+            isExact: true,
+            path: '',
+            url: '',
             params: {
                 videoSelected: ''
             }
-        }));
+        };
 
-        const result= selectors.getVideos(state);
+        const result= selectors.getVideos(state, match);
         expect(result.data.length).toBe(5);
         expect(result.data[0].name).toEqual('stub name 1');
         expect(result.data[1].name).toEqual('stub name 10');
@@ -88,13 +94,16 @@ describe("videos selectors", function() {
             },
         };
 
-        (createMatchSelector as jest.Mock).mockImplementation(() => () => ({
+        const match = {
+            isExact: true,
+            path: '',
+            url: '',
             params: {
                 videoSelected: ''
             }
-        }));
+        };
 
-        const result= selectors.getVideos(state);
+        const result= selectors.getVideos(state, match);
         expect(result.data.length).toBe(10);
         expect(result.data[0].name).toEqual('stub name 1');
         expect(result.data[1].name).toEqual('stub name 10');
@@ -113,13 +122,16 @@ describe("videos selectors", function() {
             },
         };
 
-        (createMatchSelector as jest.Mock).mockImplementation(() => () => ({
+        const match = {
+            isExact: true,
+            path: '',
+            url: '',
             params: {
                 videoSelected: 'stub-slug-3'
             }
-        }));
+        };
 
-        const result= selectors.getVideos(state);
+        const result= selectors.getVideos(state, match);
         expect(result.data.length).toBe(9);
         expect(result.data[0].name).toEqual('stub name 1');
         expect(result.data[1].name).toEqual('stub name 10');

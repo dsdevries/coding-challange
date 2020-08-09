@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
+import {RouteComponentProps, withRouter} from "react-router";
 import { useHistory } from "react-router-dom";
 import { Waypoint } from 'react-waypoint';
 import styled from 'styled-components';
@@ -10,7 +11,7 @@ import {Video} from "../types/app-types";
 import VideoThumbnail from './VideoThumbnail';
 import {RootState} from "../index";
 
-type VideoListProps = {
+interface VideoListProps extends RouteComponentProps {
     videos: {
         page: number,
         per_page: number,
@@ -21,7 +22,7 @@ type VideoListProps = {
         },
         data: Array<Video>,
     };
-};
+}
 
 const Wrapper = styled.div`
     display: flex;
@@ -89,12 +90,12 @@ const VideoList = ({ videos }: VideoListProps) => {
     );
 }
 
-const mapStateToProps = (state:RootState) => {
+const mapStateToProps = (state:RootState, ownProps:RouteComponentProps) => {
     return {
-        videos: getVideos(state),
+        videos: getVideos(state, ownProps.match),
     };
 };
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
-)(VideoList);
+)(VideoList));

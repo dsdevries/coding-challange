@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import { connect } from "react-redux";
+import {withRouter, RouteComponentProps} from "react-router";
 import styled from 'styled-components';
 import {
     Player,
@@ -18,9 +19,9 @@ import {Video} from "../types/app-types";
 import HLSSource from './HLSSource';
 import {RootState} from "../index";
 
-type VideoRectangleProps = {
+interface VideoRectangleProps extends RouteComponentProps {
     videoSelected: Video
-};
+}
 
 const Wrapper = styled.div`
     width: 100%;
@@ -65,12 +66,12 @@ const VideoRectangle = ({ videoSelected }: VideoRectangleProps) => {
     );
 }
 
-const mapStateToProps = (state:RootState) => {
+const mapStateToProps = (state:RootState, ownProps:RouteComponentProps) => {
     return {
-        videoSelected: getSelectedVideo(state),
+        videoSelected: getSelectedVideo(state, ownProps.match),
     };
 };
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
-)(VideoRectangle);
+)(VideoRectangle));
