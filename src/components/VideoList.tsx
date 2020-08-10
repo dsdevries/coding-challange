@@ -11,8 +11,8 @@ import {Videos} from '../state/modules/videos/videos';
 import VideoThumbnail from './VideoThumbnail';
 import {RootState} from "../index";
 
-interface VideoListProps extends RouteComponentProps {
-    videos: Videos;
+type VideoListProps = RouteComponentProps & {
+    videos: Videos,
 }
 
 const Wrapper = styled.div`

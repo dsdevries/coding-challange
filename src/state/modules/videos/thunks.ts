@@ -1,12 +1,14 @@
 import {AxiosResponse} from 'axios';
+
+import {AppDispatch, AppThunk} from "../../../index";
 import {apiGet} from "../../apiRequest";
-import {NAMESPACE, VIDEOS_ENDPOINT} from "./const";
 import {hydrateVideoData} from "./actions";
-import {AppDispatch} from "../../../index";
+import {VIDEOS_ENDPOINT, NAMESPACE} from "./const";
+import {FetchVideoAction} from "./videos";
 
-const FETCH_VIDEOS = `${NAMESPACE}/FETCH_VIDEOS`;
+export const FETCH_VIDEOS:string = `${NAMESPACE}/FETCH_VIDEOS`;
 
-export const fetchVideos = () => (dispatch:AppDispatch) => dispatch<any>(apiGet(FETCH_VIDEOS, VIDEOS_ENDPOINT)).payload.then(
+export const fetchVideos = (): AppThunk => (dispatch:AppDispatch) => dispatch<FetchVideoAction>(apiGet(FETCH_VIDEOS, VIDEOS_ENDPOINT)).payload.then(
     (response:AxiosResponse) => {
         dispatch(hydrateVideoData(response.data.videos));
     },

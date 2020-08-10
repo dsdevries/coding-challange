@@ -19,7 +19,7 @@ import {Video} from "../state/modules/videos/videos";
 import HLSSource from './HLSSource';
 import {RootState} from "../index";
 
-interface VideoRectangleProps extends RouteComponentProps {
+type VideoRectangleProps = RouteComponentProps & {
     videoSelected: Video
 }
 

@@ -1,3 +1,6 @@
+import {FETCH_VIDEOS, HYDRATE_VIDEO_DATA} from "./const";
+import {AxiosResponse} from "axios";
+
 export type Video = {
     name: string,
     path: string,
@@ -19,3 +22,13 @@ export type Videos = {
     },
     data: Array<Video>
 };
+
+export interface HydrateVideoDataAction {
+    type: typeof HYDRATE_VIDEO_DATA,
+    payload: Array<Video>,
+}
+
+export interface FetchVideoAction {
+    type: typeof FETCH_VIDEOS,
+    payload: Promise<AxiosResponse>,
+}

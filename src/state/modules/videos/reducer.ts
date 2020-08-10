@@ -2,16 +2,11 @@ import { handleActions } from 'redux-actions';
 
 import {HYDRATE_VIDEO_DATA} from "./const";
 import initialState from './initialState';
-import {State, Video} from './videos';
-
-type HydrateVideoAction = {
-    payload: Array<Video>;
-    type: string,
-}
+import {State, Video, HydrateVideoDataAction} from './videos';
 
 const videosReducer = handleActions(
     {
-        [HYDRATE_VIDEO_DATA]: (state: State, action: HydrateVideoAction ) => ({
+        [HYDRATE_VIDEO_DATA]: (state: State, action: HydrateVideoDataAction ):State => ({
             ...state,
             data: action.payload.map((video: Video) => ({
                 ...video,

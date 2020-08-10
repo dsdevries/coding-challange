@@ -12,17 +12,17 @@ import React, { Component } from 'react';
     https://en.wikipedia.org/wiki/HTTP_Live_Streaming
 */
 
-interface Window {
+type Window = {
     Hls?: any;
 }
-
-const { Hls } = window as Window;
 
 type HLSSourceProps = {
     src: string;
     video?: HTMLVideoElement;
     type?: string;
 };
+
+const { Hls } = window as Window;
 
 export default class HLSSource extends Component<HLSSourceProps> {
     hls = new Hls();
